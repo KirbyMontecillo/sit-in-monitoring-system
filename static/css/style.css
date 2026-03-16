@@ -1,0 +1,321 @@
+:root {
+    --uc-navy: #1a3a6b;
+    --uc-blue: #2e7fc1;
+}
+
+body {
+    background: #f7f9fc !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+}
+
+/* ── Navbar ── */
+.uc-nav {
+    background: var(--uc-navy);
+    height: 56px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uc-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.uc-nav-brand img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,.3);
+}
+
+.uc-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.uc-nav-links a {
+    color: rgba(255,255,255,.8);
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.uc-nav-links a:hover,
+.uc-nav-links a.active {
+    background: rgba(255,255,255,.15);
+    color: #fff;
+}
+
+/* Dropdown */
+.uc-dropdown {
+    position: relative;
+}
+
+.uc-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #dce8f5;
+    border-radius: 8px;
+    padding: 6px 0;
+    min-width: 130px;
+    z-index: 100;
+}
+
+.uc-dropdown:hover .uc-dropdown-menu {
+    display: block;
+}
+
+.uc-dropdown-menu a {
+    display: block;
+    padding: 7px 14px;
+    font-size: 13px;
+    color: var(--uc-navy) !important;
+    background: none !important;
+}
+
+.uc-dropdown-menu a:hover {
+    background: #f0f6fc !important;
+}
+
+/* ── Auth page layout ── */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
+    padding: 2rem 1rem;
+}
+
+.auth-page--register {
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 460px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.logo-ring {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1.5px solid #dce8f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.logo-ring img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.header h2 {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--uc-navy);
+    margin-bottom: .2rem;
+}
+
+.header p {
+    font-size: 13px;
+    color: #7a8fa6;
+}
+
+/* Form card */
+.form-card {
+    background: #fff;
+    border: 1px solid #dce8f5;
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--uc-blue);
+    margin-bottom: .9rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid #eaf4fb;
+}
+
+/* Back button */
+.btn-back {
+    display: inline-block;
+    font-size: 12.5px;
+    color: #7a8fa6;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+}
+
+.btn-back:hover {
+    color: var(--uc-navy);
+}
+
+/* Layout helpers */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.spacer {
+    height: 1.25rem;
+}
+
+/* Fields */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.field label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #5a7090;
+}
+
+.field input,
+.field select {
+    border: 1px solid #d0e2f0;
+    border-radius: 8px;
+    padding: 8px 11px;
+    font-size: 13.5px;
+    font-family: inherit;
+    color: var(--uc-navy);
+    background: #fff;
+    outline: none;
+    width: 100%;
+    transition: border .15s, box-shadow .15s;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: var(--uc-blue);
+    box-shadow: 0 0 0 3px rgba(46, 127, 193, .1);
+}
+
+/* Remember me row */
+.row-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    font-size: 12.5px;
+}
+
+.row-check label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #5a7090;
+    cursor: pointer;
+}
+
+.row-check input[type="checkbox"] {
+    accent-color: var(--uc-navy);
+}
+
+.row-check a {
+    color: var(--uc-blue);
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn-register,
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background: var(--uc-navy);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+    background: #142d56;
+}
+
+/* Footer link */
+.footer-link {
+    text-align: center;
+    font-size: 12.5px;
+    color: #7a8fa6;
+    margin-top: .9rem;
+    margin-bottom: 0;
+}
+
+.footer-link a {
+    color: var(--uc-blue);
+    text-decoration: none;
+}
+
+/* ── Login two-column layout ── */
+.login-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 860px;
+}
+
+.ccs-logo-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ccs-logo-side img {
+    max-width: 200px;
+    width: 100%;
+}
+
+.login-layout .wrap {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* CCS logo above welcome back */
+.ccs-logo-top {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto 0.75rem;
+    display: block;
+}
